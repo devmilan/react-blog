@@ -9,7 +9,7 @@ import data from "./data";
 export default () => (
   <Fragment>
     <Helmet titleTemplate="%s | My Blog" />
-  <Router>
+  <Router basename={process.env.REACT_APP_BASENAME}>
     <Switch>
       <Route exact path="/" render={routeProps => <Posts {...data} />} />
 
